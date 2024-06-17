@@ -1,37 +1,38 @@
 {
-  "name": "ventures",
-  "version": "1.0.0",
-  "description": "This is an API requests project with JavaScript (with React and Express)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "start:backend": "npm start --prefix backend",
-    "start:frontend": "npm start --prefix frontend",
-    "install": "cd backend && npm install && cd ../frontend && npm install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "github.com/palomam26/ventures"
-  },
-  "keywords": [
-    "react-express-javascript-api"
-  ],
-  "author": "Paloma Marques",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "express": "^4.17.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^16.0.0",
-    "concurrently": "^6.5.1",
-    "jest": "^27.4.5",
-    "npm": "^10.8.1"
-  }
+	"name": "ventures",
+	"version": "1.0.0",
+	"description": "This is an API requests project with JavaScript (with React and Express)",
+	"main": "index.js",
+	"scripts": {
+		"start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+		"start:backend": "npm start --workspace=backend",
+		"start:frontend": "npm start --workspace=frontend",
+		"prettier": "prettier --check .",
+		"prettier:fix": "prettier --write .",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"test": "npm run test --workspace=backend && npm run test --workspace=frontend",
+		"test:backend": "npm run test --workspace=backend",
+		"test:frontend": "npm run test --workspace=frontend",
+		"coverage": "jest --coverage"
+	},
+	"repository": {
+		"type": "git",
+		"url": "github.com/palomam26/ventures"
+	},
+	"keywords": [
+		"react-express-javascript-api"
+	],
+	"author": "Paloma Marques",
+	"license": "ISC",
+	"workspaces": [
+		"frontend",
+		"backend"
+	],
+	"devDependencies": {
+		"concurrently": "^6.5.1",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.7",
+		"prettier": "^3.3.2"
+	}
 }

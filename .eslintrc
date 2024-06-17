@@ -1,0 +1,61 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest": true,
+		"node": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 13,
+		"sourceType": "module"
+	},
+	"plugins": ["react"],
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"react/function-component-definition": [
+			"warn",
+			{
+				"namedComponents": "arrow-function"
+			}
+		],
+		"react/display-name": "off",
+		"no-constant-binary-expression": "error",
+		"no-duplicate-imports": "error",
+		"no-promise-executor-return": "error",
+		"no-self-compare": "error",
+		"no-unreachable-loop": "error",
+		"no-use-before-define": "error",
+		"require-atomic-updates": "error",
+		"block-scoped-var": "error",
+		"eqeqeq": "error",
+		"no-alert": "error",
+		"no-confusing-arrow": "error",
+		"no-floating-decimal": "error",
+		"no-lone-blocks": "error",
+		"no-lonely-if": "error",
+		"no-mixed-operators": "error",
+		"no-new": "error",
+		"no-new-func": "error",
+		"no-param-reassign": "error",
+		"prefer-const": "error",
+		"require-await": "error",
+		"no-template-curly-in-string": "warn",
+		"no-unmodified-loop-condition": "warn",
+		"no-await-in-loop": "warn",
+		"camelcase": ["warn", { "properties": "always" }],
+		"consistent-return": "warn",
+		"default-case": "warn",
+		"multiline-comment-style": ["warn", "starred-block"],
+		"no-nested-ternary": "warn",
+		"no-new-wrappers": "warn",
+		"no-return-await": "warn",
+		"no-unneeded-ternary": "warn",
+		"no-var": "warn",
+		"prefer-template": "warn",
+		"no-console": "warn"
+	}
+}
